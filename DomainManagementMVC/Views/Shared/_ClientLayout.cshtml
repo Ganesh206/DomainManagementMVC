@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from coderthemes.com/simple/light/pages-blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 09:58:35 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <title>SimpleAdmin - Responsive Admin Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    @Styles.Render("~/bundles/Theme/css")
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <!-- Top Bar Start -->
+        <div class="topbar">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <div class="">
+                    <a href="index.html" class="logo">
+                        <img src="~/assets/images/dmsLogo.png" alt="logo" class="logo-lg" />
+                        <img src="~/assets/images/logo_sm.png" alt="logo" class="logo-sm hidden" />
+                    </a>
+                </div>
+            </div>
+            <!-- Top navbar -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="">
+                        <!-- Mobile menu button -->
+                        <div class="pull-left">
+                            <button type="button" class="button-menu-mobile visible-xs visible-sm">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <span class="clearfix"></span>
+                        </div>
+                        <!-- Top nav left menu -->
+                        <!--                            <ul class="nav navbar-nav hidden-sm hidden-xs top-navbar-items">
+                                                        <li><a href="#">About</a></li>
+                                                        <li><a href="#">Help</a></li>
+                                                        <li><a href="#">Contact</a></li>
+                                                    </ul>-->
+                        <!-- Top nav Right menu -->
+                        <ul class="nav navbar-nav navbar-right top-navbar-items-right pull-right">
+                            <li class="hidden-xs">
+                                <form role="search" class="navbar-left app-search pull-left">
+                                    <input type="text" placeholder="Search..." class="form-control">
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </form>
+                            </li>
+                            <li class="dropdown top-menu-item-xs">
+                                <a href="#" data-target="#" class="dropdown-toggle menu-right-item" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="mdi mdi-home"></i> 
+                                </a>
+                                
+                            </li>
+                            <li class="dropdown top-menu-item-xs">
+                                <a href="#" class="dropdown-toggle menu-right-item profile" data-toggle="dropdown" aria-expanded="true"><img src="~/assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-10"></i> Profile</a></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-settings m-r-10"></i> Settings</a></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-lock m-r-10"></i> Lock screen</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-power-off m-r-10"></i> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end container -->
+            </div> <!-- end navbar -->
+        </div>
+        <!-- Top Bar End -->
+        <!-- Page content start -->
+        <div class="page-contentbar">
+            <!--left navigation start-->
+            <aside class="sidebar-navigation">
+                <div class="scrollbar-wrapper">
+                    <div>
+                        <button type="button" class="button-menu-mobile btn-mobile-view visible-xs visible-sm">
+                            <i class="mdi mdi-close"></i>
+                        </button>
+                        <!-- User Detail box -->
+                        <div class="user-details">
+                            <div >
+                                <a href="javascript:;" class="center-block text-center text-dark">
+                                    <img src="~/Clients/client1.png" class="thumb-xl img-thumbnail img-circle" alt="">
+                                    <div class="h5 m-b-0"><strong>Weblabs It Solutions</strong></div>
+                                </a>
+                                <div class="bg-custom pull-in-card p-20 widget-box-two m-b-0 m-t-30 list-inline text-center row">
+                                    <div class="col-xs-4">
+                                        <h4 class="text-white m-0 font-600">782</h4>
+                                        <p class="text-white m-b-0">Followers</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h4 class="text-white m-0 font-600">834</h4>
+                                        <p class="text-white m-b-0">Following</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h4 class="text-white m-0 font-600">2907</h4>
+                                        <p class="text-white m-b-0">Likes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- End User Detail box -->
+                        <!-- Left Menu Start -->
+                        <ul class="metisMenu nav" id="side-menu">
+                            <li><a href="index.html"><i class="ti-home"></i> Dashboard </a></li>
+                            <li><a href="typography.html"><i class="fa fa-at"></i> Domains </a></li>
+                            <li><a href="typography.html"><i class="fa fa-server"></i> Hostings </a></li>
+                            <li><a href="typography.html"><i class="fa fa-envelope"></i> Emails </a></li>
+                            <li><a href="typography.html"><i class="ti-pie-chart"></i> C-Panels </a></li>
+                            <li><a href="typography.html"><i class="fa fa-upload"></i> FTP Details </a></li>
+                        </ul>
+                    </div>
+                </div><!--Scrollbar wrapper-->
+            </aside>
+            <!--left navigation end-->
+            <!-- START PAGE CONTENT -->
+            <div id="page-right-content">
+                <div class="container">
+                    <!-- end row -->
+
+                    @RenderBody()
+                </div>
+                <!-- end container -->
+                <div class="footer">
+                    <div class="pull-right hidden-xs">
+                        Project Completed <strong class="text-custom">39%</strong>.
+                    </div>
+                    <div>
+                        <strong>Simple Admin</strong> - Copyright &copy; 2016
+                    </div>
+                </div> <!-- end footer -->
+            </div>
+            <!-- End #page-right-content -->
+            <div class="clearfix"></div>
+        </div>
+        <!-- end .page-contentbar -->
+    </div>
+    <!-- End #page-wrapper -->
+    <!-- js placed at the end of the document so the pages load faster -->
+    @Scripts.Render("~/bundles/Theme/Js")
+    @RenderSection("scripts", required: false)
+</body>
+<!-- Mirrored from coderthemes.com/simple/light/pages-blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 09:58:35 GMT -->
+</html>

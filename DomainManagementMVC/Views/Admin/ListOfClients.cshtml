@@ -1,0 +1,68 @@
+﻿@model IEnumerable<DomainManagementMVC.Models.Tbl_Clients>
+@{
+    ViewBag.Title = "ListOfClients";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="header-title m-t-0 m-b-20">Clients</h4>
+    </div>
+</div>
+<div class="pull-right">
+
+    <a href="#"  data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Add New Client" >
+        <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
+    </a>
+</div>
+<div class="clearfix"></div>
+<div class="row">
+@foreach (var item in Model)
+{
+
+    <div class="col-md-4">
+        <div class="text-center card-box">
+            <div class="dropdown pull-right">
+                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+                    <h3 class="m-0 text-muted"><i class="mdi mdi-dots-horizontal"></i></h3>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Delete</a></li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div class="member-card">
+                <div class="thumb-xl member-thumb m-b-10 center-block">
+                    <img src="~/assets/images/DummyCompLogo.png" class="img-circle img-thumbnail" alt="profile-image">
+                    <i class="mdi mdi-information-outline member-star text-success" title="verified user"></i>
+                </div>
+                <div class="">
+                    <h4 class="m-b-5">@item.ClientName</h4>
+                    <p class="text-muted">@item.ContactPersonName  </p>
+                    <p class="text-muted">@item.MobileNumbar <span> | </span> <span> <a href="#" class="text-pink">@item.EmailId</a> </span></p>
+                </div>
+                <p class="text-muted font-13">
+                  @item.Address
+                </p>
+   
+                <button type="button" class="btn btn-default btn-sm m-t-10">View Details</button>
+                <ul class="social-links list-inline m-t-30">
+                    <li>
+                        <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Edit"><i class="fa fa-pencil-square-o"></i></a>
+                    </li>
+                    <li>
+                        <a title=""  data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
+                    </li>
+                    <li>
+                        <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Status"><i class="fa fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+
+}
+</div>
